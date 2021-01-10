@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+
+
+*{
+    box-sizing:border-box;
+    height:100%;
+}
+*{
+    background-color:#e6ecf5;
+}
+/* .body{
+    height: 100%;
+} */
+.screen-background{
+    height:100%;
+    text-align:center;
+
+}
+.screen-text h1{
+    font-family: 'Arvo', serif;
+    font-size:4.5vw;
+    color:#2b3f5c;
+    margin-bottom:0;
+
+    
+}
+.screen-text p{
+    font-family: 'Abel', sans-serif;
+    color:#2b3f5c;
+    margin-bottom:0;
+}
+/* .screen-background:after {
+    content: "";
+    display: table;
+    clear: both;
+  } */
+
+.column{
+    float:left;
+    width:50%;
+    padding:10px;
+    height:100%;
+    justify-content: center;
+
+}
+
+
+  
