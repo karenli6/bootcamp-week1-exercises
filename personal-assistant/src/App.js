@@ -1,7 +1,7 @@
 import React from 'react'
 import {Switch, Route, BrowserRouter} from 'react-router-dom'
-import TodoList from './ListComponent/todolist'
-import Greeting from './Greeting/greetingPage'
+import TodoList from './components/ListComponent/todolist'
+import Greeting from './components/Greeting/greetingPage'
 
 
 

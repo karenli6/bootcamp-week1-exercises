@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import './fonts.css'
+import '../fonts.css'
 import backimg from './cloud.jpg'
 import {Link} from 'react-router-dom'
 
@@ -21,12 +21,8 @@ export const Row = styled.div`
     font-family: 'Arvo', serif;
     float:top;
     width:100%;
-    /* padding:10px; */
     height:80%;
     justify-content: center;
-    /* background-image: url(${backimg});    
-    background-size: contain; */
-
 
 `
 
@@ -50,18 +46,15 @@ export const Row2 = styled.div`
     font-family: 'Arvo', serif;
     float:top;
     width:100%;
-    /* padding:10px; */
     height:30%;
  
     justify-content: center;
-    /* background-color: #2b3f5c; */
 
 `
 
 
 export const Column2 = styled.div`
     color:white;
-    /* display:inline; */
     font-size:5vw;
     background-color:#2b3f5c;
     justify-content:center;
@@ -69,8 +62,6 @@ export const Column2 = styled.div`
     margin-top:3vw;
     margin-left:9vw;
     margin-right:9vw;
-  
-
     box-shadow: 5px 5px 5px 5px white;
     
 `
