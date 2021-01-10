@@ -1,7 +1,7 @@
 /**
  * Part 1:
- *    What will print and why?
- *    What will change if we delete line 15? Why?
+ *    What will print and why? undefined because a was not decalred
+ *    What will change if we delete line 15? Why? because a is now a global variable
  * 
  * Part 2:
  *    Change to ES6 syntax (use arrow functions and change var to let).
@@ -11,12 +11,12 @@
  *        console logs.
  */
 
-function x() {
-  var a;
+const x = ()  => {
+  let a = 2;
   console.log(a);
 }
 
-function y() {
+const y = () =>{
   var a = 2;
   console.log(a);
   x();
