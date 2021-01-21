@@ -68,3 +68,8 @@ export const StyledLink = styled(Link)`
         opacity: 0.7;
 	}
 `
+
+export const SearchBar = styled.input`
+    font-family: 'Arvo', serif;
+    margin-bottom:2vw;
+`
