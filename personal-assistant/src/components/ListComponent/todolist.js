@@ -43,23 +43,16 @@ const TodoList = () => {
         if (e.target.value !== "") {
             currentForm = form
             newForm = currentForm.filter(d => {
-                // change current item to lowercase
                 const item = d.task.toLowerCase();
-                // change search term to lowercase
-                const checking = e.target.value.toLowerCase();
-                // check to see if the current list item includes the search term
-                // If it does, it will be added to newList. Using lowercase eliminates
-                // issues with capitalization in search terms and search content
-                return item.includes(checking);
-            });
+                const targetValue = e.target.value.toLowerCase();
 
-            // console.log(newForm)
+                return item.includes(targetValue);
+            });
         
            
         } else {
             newForm = form
         }
-        console.log(newForm)
 
         setForm(newForm)
 
