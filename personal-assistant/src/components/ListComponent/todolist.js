@@ -4,17 +4,20 @@ import { Container, Column, Column2, Form, StyledLink, SearchBar } from './listS
 import '../fonts.css'
 
 
+
 const taskStorage = [
     {
         task: 'This is an example task :)',
     }
-];
+]
+
 
 
 const TodoList = () => {
 
     // form stores all the task inputs from user
     const [form, setForm] = useState(taskStorage)
+    const [previous, setPrevious] = useState(taskStorage)
     const [task, setTask] = useState('')
 
     const handleChange = (element) => {
@@ -22,36 +25,38 @@ const TodoList = () => {
     }
     const handleAdd = () => {
         if (task !== "") {
-            const newForm = form.concat({ task });
+            const newForm = form.concat({ task })
 
-            setForm(newForm);
-            setTask('');
+            setForm(newForm)
+            setPrevious(newForm)
+            setTask('')
         }
 
     }
     const handleRemove = (task) => {
 
         const newForm = form.filter((d) => d.task !== task)
-
+        setPrevious(newForm)
         setForm(newForm)
     }
     // adds functionality to search
     const handleSearchChange = (e) => {
-        let currentForm = [];
-        let newForm = [];
+        // console.log(previous)
+        let currentForm = []
+        let newForm = []
 
         if (e.target.value !== "") {
             currentForm = form
             newForm = currentForm.filter(d => {
-                const item = d.task.toLowerCase();
-                const targetValue = e.target.value.toLowerCase();
+                const item = d.task.toLowerCase()
+                const targetValue = e.target.value.toLowerCase()
 
-                return item.includes(targetValue);
-            });
+                return item.includes(targetValue)
+            })
         
            
         } else {
-            newForm = form
+            newForm = previous
         }
 
         setForm(newForm)
